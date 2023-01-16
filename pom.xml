@@ -16,7 +16,7 @@
 
 
 <properties>
-<!--    <java.version>18</java.version>-->
+    <java.version>18</java.version>
 </properties>
 
     <dependencies>
@@ -37,6 +37,11 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
         <dependency>
