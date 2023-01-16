@@ -7,6 +7,7 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -14,7 +15,7 @@ import javax.persistence.*;
 @DynamicUpdate
 public class AppRole {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue
     private Long id;
 
     @Column(unique = true)
