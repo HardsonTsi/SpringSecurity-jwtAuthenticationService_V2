@@ -30,7 +30,6 @@ public class SecurityServiceV2Application {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
     CommandLineRunner run(AccountService accountService, TaskService taskService) {
         return args -> {
             // Ajout d'utilisateurs sans rôles
@@ -63,7 +62,7 @@ public class SecurityServiceV2Application {
                                     Task task1 = new Task();
                                     task1.setName(task);
                                     task1.setDescription(descriptions[i]);
-                                    task1.setStatus(Math.random() > Math.random());
+                                    task1.setStatus(false);
                                     task1.setUsername(user.getUsername());
                                     taskService.saveTask(task1);
                                     i++;
